@@ -6,7 +6,11 @@ namespace Open_Lab_04._04
     {
         public string FormatPhoneNumber(int[] numbers)
         {
-            return$"({numbers[0]}{numbers[1]}{numbers[2]}) {numbers[3]}{numbers[4]}{numbers[5]}-{numbers[6]}{numbers[7]}{numbers[8]}{numbers[9]}" ;
+            string first = String.Join("", numbers[0..3]);
+            string second = String.Join("", numbers[3..6]);
+            string third = String.Join("", numbers[6..10]);
+           
+            return "(" + first + ")" + " " + second + "-" + third; 
         }
     }
 }
